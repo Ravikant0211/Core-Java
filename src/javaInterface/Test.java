@@ -15,7 +15,7 @@ public class Test {
 }
 
 // Interfaces:
-// 1. Interface is the blueprint from class.
+// 1. Interface is the blueprint for class.
 // 2. Using interfaces, we can achieve Multiple Inheritance and Abstraction.
 // 3. Interface, in Java, can have abstract methods, static constants, static methods, and default methods.
 
