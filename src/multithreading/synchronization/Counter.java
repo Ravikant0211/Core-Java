@@ -13,7 +13,10 @@ public class Counter {
         count++;
     }*/
 
-    // So, making the shared resources accessible to only one thread at a time is known as locking.
+    // So, making the shared resources accessible to only one thread at a time is known as locking (implicit locking).
+    // There are two types of locking-
+    // 1. Implicit locking (using synchronized keyword)
+    // 2. Explicit locking (Using methods provided by 'java.util.concurrent.locks.Lock'. For example: tryLock, Lock, unlock, etc).
     public void increment() {
         synchronized (this) {
             count++;

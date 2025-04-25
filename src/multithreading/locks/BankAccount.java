@@ -20,7 +20,7 @@ public class BankAccount {
                         balance -= amount;
                         System.out.println(Thread.currentThread().getName() + " completed withdrawal. Remaining balance: " + balance);
                     } catch (Exception e) {
-                        Thread.currentThread().interrupt();
+                        Thread.currentThread().interrupt(); // This is important to handle and is good practice.
                     } finally {
                         lock.unlock();
                     }
