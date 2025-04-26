@@ -7,7 +7,7 @@ import java.util.concurrent.*;
 
 public class Test3 {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
 
         // -------------------------------------------------------------------------
 
@@ -80,6 +80,19 @@ public class Test3 {
         };
 
         List<Callable<Integer>> list = Arrays.asList(callable1, callable2, callable3);
+
+//      Executes the given tasks, returning the result of one that has completed successfully (i.e., without throwing an exception),
+//      if any do. Upon normal or exceptional return, tasks that have not completed are cancelled.
+        try {
+            Integer i = executorService.invokeAny(list);
+            System.out.println(i);
+        } catch (InterruptedException e) {
+
+        } catch (ExecutionException e) {
+
+        }
+
+        executorService.shutdown();
     }
 
 }

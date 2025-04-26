@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
+//        ExecutorService executorService = Executors.newCachedThreadPool(); // automatically, manages the pool size
         ExecutorService executor = Executors.newFixedThreadPool(3);
         for (int i = 1; i < 10; i++) {
             int finalI = i;
